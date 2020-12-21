@@ -78,17 +78,14 @@ function ProgressBar({className = "", percent = 0, trackRemaining = false, over 
 function CurrentTimebox (props) {
     const {
         title,
-        totalTimeInMinutes,
         isEditable,
         isRunning,
         isPaused,
         pausesCount,
         elapsedTimeInSeconds,
-        onStart,
         onStop,
         onEdit,
         onPause,
-        onTitleChange, 
         totalTime,
     } = props
                     
