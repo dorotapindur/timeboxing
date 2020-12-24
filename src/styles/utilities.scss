@@ -1,0 +1,14 @@
+.inactive {
+    filter: blur(2px) grayscale(1);
+}
+.invisible {
+    display: none;
+}
+.orangered {
+    color: $main-color;
+}
+.timeisup {
+    color: white;
+    background-color: red;
+    background-clip: content-box;
+}

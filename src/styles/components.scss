@@ -1,0 +1,75 @@
+.App {
+    font-family: sans-serif;
+    padding: 50px;
+}
+.Timebox {
+    border: $default-border;
+    border-radius: $border-radius;
+    padding: 5px;
+    margin: 0 auto 10px;
+    background-color: greenyellow;
+}
+.TimeboxEditor, .TimeboxCreator {
+    max-width: 400px;
+    text-align: right;
+    border: $default-border;
+    border-radius: $border-radius;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+.TimeboxCreator {
+    background-color: aqua;
+}
+.TimeboxEditor {
+    background-color: aquamarine;
+}
+.TimeboxEditor::before {
+    width: 60px;
+    height: 60px;
+    content: "";
+    background: url("../images/tomato-icon.png");
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.CurrentTimebox {
+    background-color: #ffffaa;
+}
+.CurrentTimebox {
+    max-width: 400px;
+    border: $default-border;
+    border-radius: $border-radius;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+.Clock {
+    color: $main-color;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    width: max-content;
+}
+.ProgressBar {
+    border-radius: 3px;
+    height: 25px;
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: $main-color;
+    background-clip: content-box;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: calc(100% + 12px);
+        height: calc(100% + 12px);
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+}
