@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
 import ProgressBar from "./ProgressBar";
+import Timebox from "./Timebox";
 
 import { v4 as uuidv4 } from 'uuid';
 uuidv4();
@@ -340,14 +341,5 @@ class TimeboxList extends React.Component {
 
 }
 
-function Timebox({ title, totalTimeInMinutes, onDelete, onEdit }) {
-    return (
-        <div className="Timebox">
-            <h3>{title} - {totalTimeInMinutes} min.</h3>
-            <button onClick={onDelete}> Usuń </button>
-            <button onClick={onEdit}> Zmień </button>
-        </div>
-    )
-}
 
 export { EditableTimebox, TimeboxList };
