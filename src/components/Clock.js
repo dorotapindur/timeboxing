@@ -12,7 +12,7 @@ function Clock({className = "", hours = 0, minutes = 0, seconds = 0, over = fals
     let secondsFormatted = seconds.toString().padStart(2, '0');
     return (
         <div>
-            <p className={over ? "Clock timeisup " + className : "Clock " + className}>Pozostało {hoursFormatted}:{minutesFormatted}:{secondsFormatted}</p>
+            <p className={over ? "Clock timeisup " + className : "Clock " + className}>Pozostało <span className="Clock__hours">{hoursFormatted}</span><span className="Clock__colon">:</span><span className="Clock__minutes">{minutesFormatted}</span><span className="Clock__colon">:</span><span className="Clock__seconds">{secondsFormatted}</span></p>
         </div>
         )
     };

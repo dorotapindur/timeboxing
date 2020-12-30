@@ -3,4 +3,16 @@
     font-weight: bold;
     margin: 0 auto 20px;
     width: max-content;
+    &__hours{
+        color: red;
+    }
+    &__minutes {
+        color :orange;
+    }
+    &__seconds {
+        color: green;
+    }
+    &__colon {
+        color: blue;
+    }
 }
