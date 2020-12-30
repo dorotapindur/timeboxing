@@ -1,0 +1,21 @@
+.ProgressBar {
+    border-radius: 3px;
+    height: 25px;
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: $main-color;
+    background-clip: content-box;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: calc(100% + 12px);
+        height: calc(100% + 12px);
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+}

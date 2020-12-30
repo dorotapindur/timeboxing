@@ -1,0 +1,21 @@
+.TimeboxEditor {
+    background-color: aquamarine;
+    max-width: 400px;
+    text-align: right;
+    border: $default-border;
+    border-radius: $border-radius;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    &::before {
+        width: 60px;
+        height: 60px;
+        content: "";
+        background: url("../../images/tomato-icon.png");
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+}

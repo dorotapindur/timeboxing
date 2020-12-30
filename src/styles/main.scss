@@ -1,6 +1,10 @@
 @import "./base.scss";
 @import "./variables.scss";
 @import "./utilities.scss";
-@import "./components.scss";
-
-
+@import "./scss-components/App.scss";
+@import "./scss-components/Timebox.scss";
+@import "./scss-components/TimeboxEditor.scss";
+@import "./scss-components/TimeboxCreator.scss";
+@import "./scss-components/CurrentTimebox.scss";
+@import "./scss-components/Clock.scss";
+@import "./scss-components/ProgressBar.scss";
