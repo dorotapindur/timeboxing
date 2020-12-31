@@ -4,15 +4,19 @@
     margin: 0 auto 20px;
     width: max-content;
     &__hours{
-        color: red;
+        color: darken($main-color, 10%);
     }
     &__minutes {
-        color :orange;
+        color: darken($main-color, 20%);
     }
     &__seconds {
-        color: green;
+        color: darken($main-color, 30%);
     }
     &__colon {
-        color: blue;
+        color: grey;
+    }
+    &--over {
+        color: white;
+        background-color: red;
     }
 }

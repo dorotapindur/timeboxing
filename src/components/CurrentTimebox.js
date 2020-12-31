@@ -26,7 +26,7 @@ function CurrentTimebox (props) {
         isEditable ? inactive = true : inactive = false
     } else { inactive = true }
     let almostOver = false;
-    if (progressInPercent > 90) {almostOver = true};
+    if (progressInPercent > 50) {almostOver = true};
     return (
         <div className={`CurrentTimebox ${inactive ? "inactive" : ""}`}>
             <h2>{title}</h2>
@@ -34,12 +34,10 @@ function CurrentTimebox (props) {
                 hours={hoursLeft}
                 minutes={minutesLeft}
                 seconds={secondsLeft}
-                over={almostOver}
-                className={isPaused ? "inactive" : ""}/>
+                over={almostOver}/>
             <ProgressBar 
                 percent={progressInPercent} 
-                over={almostOver}
-                className={isPaused ? "inactive" : ""} />
+                over={almostOver} />
             <button
                 onClick={onEdit}
                 disabled={inactive}>Edytuj</button>

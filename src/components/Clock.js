@@ -1,6 +1,6 @@
 import React from "react";
 
-function Clock({className = "", hours = 0, minutes = 0, seconds = 0, over = false}) {
+function Clock({ hours = 0, minutes = 0, seconds = 0, over}) {
     if (hours < 0) {hours = 0}
     if (hours > 23) {hours = 23}
     if (minutes < 0) {minutes = 0}
@@ -12,7 +12,7 @@ function Clock({className = "", hours = 0, minutes = 0, seconds = 0, over = fals
     let secondsFormatted = seconds.toString().padStart(2, '0');
     return (
         <div>
-            <p className={over ? "Clock timeisup " + className : "Clock " + className}>Pozostało <span className="Clock__hours">{hoursFormatted}</span><span className="Clock__colon">:</span><span className="Clock__minutes">{minutesFormatted}</span><span className="Clock__colon">:</span><span className="Clock__seconds">{secondsFormatted}</span></p>
+            <p className={over ? "Clock Clock--over" : "Clock"}>Pozostało <span className="Clock__hours">{hoursFormatted}</span><span className="Clock__colon">:</span><span className="Clock__minutes">{minutesFormatted}</span><span className="Clock__colon">:</span><span className="Clock__seconds">{secondsFormatted}</span></p>
         </div>
         )
     };
