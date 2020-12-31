@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 function TimeboxEditor(props) {
     const { 
@@ -17,8 +18,14 @@ function TimeboxEditor(props) {
         else {inactive = true}
     }
     else {inactive = false}
+    let timeboxEditorClassName = classNames(
+        "TimeboxEditor",
+        {
+            "inactive": inactive,
+        }
+    )
     return (
-        <div className={`TimeboxEditor ${!inactive ? "" : "inactive"}`}>
+        <div className={timeboxEditorClassName}>
             <label>Co robisz? <input
                 disabled={inactive}
                 value={title}

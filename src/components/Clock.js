@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 function Clock({ hours = 0, minutes = 0, seconds = 0, over}) {
     if (hours < 0) {hours = 0}
@@ -10,9 +11,15 @@ function Clock({ hours = 0, minutes = 0, seconds = 0, over}) {
     let hoursFormatted = hours.toString().padStart(2, '0');
     let minutesFormatted = minutes.toString().padStart(2, '0');
     let secondsFormatted = seconds.toString().padStart(2, '0');
+    let clockClassName = classNames(
+        "Clock",
+        {
+            "Clock--over": over,
+        }
+        );
     return (
         <div>
-            <p className={over ? "Clock Clock--over" : "Clock"}>Pozostało <span className="Clock__hours">{hoursFormatted}</span><span className="Clock__colon">:</span><span className="Clock__minutes">{minutesFormatted}</span><span className="Clock__colon">:</span><span className="Clock__seconds">{secondsFormatted}</span></p>
+            <p className={clockClassName}>Pozostało <span className="Clock__hours">{hoursFormatted}</span><span className="Clock__colon">:</span><span className="Clock__minutes">{minutesFormatted}</span><span className="Clock__colon">:</span><span className="Clock__seconds">{secondsFormatted}</span></p>
         </div>
         )
     };

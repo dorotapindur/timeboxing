@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
 import ProgressBar from "./ProgressBar";
+import classNames from "classnames";
 
 function CurrentTimebox (props) {
     const {
@@ -27,8 +28,14 @@ function CurrentTimebox (props) {
     } else { inactive = true }
     let almostOver = false;
     if (progressInPercent > 50) {almostOver = true};
+    let currentTimeboxClassName = classNames(
+        "CurrentTimebox",
+        {
+            "inactive": inactive,
+        }
+    )
     return (
-        <div className={`CurrentTimebox ${inactive ? "inactive" : ""}`}>
+        <div className={currentTimeboxClassName}>
             <h2>{title}</h2>
             <Clock 
                 hours={hoursLeft}
