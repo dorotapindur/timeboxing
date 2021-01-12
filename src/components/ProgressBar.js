@@ -7,7 +7,7 @@ function ProgressBar({ percent, over, trackRemaining = false, }) {
     let progressBarClassName = classNames(
         "ProgressBar",
         {
-            "ProgressBar--over": over,
+            "timeisup": over,
         }
         );
     if (trackRemaining)  

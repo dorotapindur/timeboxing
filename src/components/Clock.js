@@ -14,7 +14,7 @@ function Clock({ hours = 0, minutes = 0, seconds = 0, over}) {
     let clockClassName = classNames(
         "Clock",
         {
-            "Clock--over": over,
+            "timeisup": over,
         }
         );
     return (
