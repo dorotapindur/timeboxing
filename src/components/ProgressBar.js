@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import "../styles/scss-components/ProgressBar.scss";
 
 function ProgressBar({ percent, over, trackRemaining = false, }) {
     if (percent > 100) {percent=100};

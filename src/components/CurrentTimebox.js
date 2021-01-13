@@ -2,6 +2,7 @@ import React from "react";
 import Clock from "./Clock";
 import ProgressBar from "./ProgressBar";
 import classNames from "classnames";
+import "../styles/scss-components/CurrentTimebox.scss";
 
 function CurrentTimebox (props) {
     const {

@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import "../styles/scss-components/Clock.scss"
 
 function Clock({ hours = 0, minutes = 0, seconds = 0, over}) {
     if (hours < 0) {hours = 0}

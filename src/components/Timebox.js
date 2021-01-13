@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/scss-components/Timebox.scss";
 
 function Timebox({ title, totalTimeInMinutes, onDelete, onEdit }) {
     return (

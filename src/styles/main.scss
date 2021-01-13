@@ -1,4 +1,21 @@
-@import "./base.scss";
-@import "./variables.scss";
-@import "./components.scss";
-@import "./utilities.scss";
+html {
+    font-size: 14px;
+}
+label {
+    font-weight: bold;
+}
+input {
+    min-width: 60%;
+    max-width: 90%;
+    margin: 0 0 14px 5px;
+    font-size: 16px;
+}
+button {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+

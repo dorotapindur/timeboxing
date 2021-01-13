@@ -1,6 +1,9 @@
 import React from "react";
+import "../styles/scss-components/TimeboxCreator.scss";
+
 import { v4 as uuidv4 } from 'uuid';
 uuidv4();
+
 
 class TimeboxCreator extends React.Component {
     constructor(props) {

@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import "../styles/scss-components/TimeboxEditor.scss";
 
 function TimeboxEditor(props) {
     const { 
