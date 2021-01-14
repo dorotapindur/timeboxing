@@ -20,8 +20,6 @@ class EditableTimebox extends React.Component {
         this.setState({title: event.target.value})
     }
     handleTotalTimeInMinutesChange = (event) => {
-        event.persist();
-        console.log(event)
         this.setState({totalTimeInMinutes: event.target.value})
     }
     handleConfirm = () => {
@@ -91,19 +89,6 @@ class EditableTimebox extends React.Component {
     render() {
         const { title, totalTimeInMinutes, isEditable, isRunning, isPaused, pausesCount, elapsedTimeInSeconds } = this.state;
         const totalTime = totalTimeInMinutes * 60;
-        console.group("Big group");
-        console.log({ totalTimeInMinutes, pausesCount });
-        console.debug("This is debug info");
-        console.groupCollapsed("some subgroup to open");
-        console.warn("This is warning");
-        console.error("This is error");
-        console.assert(2 < 4, "Everything is fine");
-        console.assert(4 < 2, "oh no, something is wrong!");
-        console.groupEnd();
-        console.groupEnd();
-        console.dirxml(document.body);
-        console.dir(document.body);
-        console.log("Title is %s, minutes: %d, pi is %f, %c grass", title, totalTimeInMinutes, 3.14, "color: green;")
         return (
             <>
                 <TimeboxEditor
