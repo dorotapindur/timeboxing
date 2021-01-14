@@ -47,6 +47,7 @@ class TimeboxList extends React.Component {
 
     render() {
         const { isEditable, timeboxEdited } = this.state;
+        console.table(this.state.timeboxes);
         return (
             <>
                 <TimeboxCreator
