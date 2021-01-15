@@ -6,8 +6,10 @@ import "../styles/scss-components/App.scss";
 function App() {
     return (
         <div className="App">
-            <TimeboxList />
-            <EditableTimebox />
+            <React.StrictMode>
+                <TimeboxList />
+                <EditableTimebox />
+            </React.StrictMode>
         </div>
     )
 }
