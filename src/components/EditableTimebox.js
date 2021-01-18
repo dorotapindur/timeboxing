@@ -32,7 +32,9 @@ class EditableTimebox extends React.Component {
     }
     handleConfirm = () => {
         this.setState({ isEditable: false });
-        this.startTimer();
+        if (!this.state.isPaused) {
+            this.startTimer();
+        }
     }
     handleEdit = () => {
         this.setState({ isEditable: true });
