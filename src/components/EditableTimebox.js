@@ -15,7 +15,15 @@ class EditableTimebox extends React.Component {
         pausesCount: 0,
         elapsedTimeInSeconds: 0,
     }
-   
+    componentDidMount() {
+        console.count("componentDidMount");
+    }
+    componentDidUpdate() {
+        console.count("componentDidUpdate");
+    }
+    componentWillUnmount() {
+        console.count("componentWillUnmount");
+    }        
     handleTitleChange = (event) => {
         this.setState({title: event.target.value})
     }
@@ -33,6 +41,7 @@ class EditableTimebox extends React.Component {
     handleStart = ()  => {
         console.log("handle start")
         this.setState({ isRunning: true });
+        this.intervalId = null;
         this.startTimer();
     }
     handleStop = () => {
@@ -57,23 +66,26 @@ class EditableTimebox extends React.Component {
     }
     
     startTimer() {
-        this.intervalId = window.setInterval (
-            () => {
-                this.setState(
-                    (prevState) => ({elapsedTimeInSeconds: prevState.elapsedTimeInSeconds + 0.01})
-                )
-                if (this.state.elapsedTimeInSeconds >= this.state.totalTimeInMinutes * 60) {
-                    this.stopTimer();
-                    this.setState({
-                        isRunning: false,
-                    });
-                }
-            },
-            10
-        );
+        if (this.intervalId === null) {
+            this.intervalId = window.setInterval (
+                () => {
+                    this.setState(
+                        (prevState) => ({elapsedTimeInSeconds: prevState.elapsedTimeInSeconds + 0.01})
+                    )
+                    if (this.state.elapsedTimeInSeconds >= this.state.totalTimeInMinutes * 60) {
+                        this.stopTimer();
+                        this.setState({
+                            isRunning: false,
+                        });
+                    }
+                },
+                10
+            );
+        }
     }
     pauseTimer() {
         window.clearInterval(this.intervalId);
+        this.intervalId = null;
     }
     stopTimer() {
         window.clearInterval(this.intervalId);
