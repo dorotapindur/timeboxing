@@ -38,12 +38,17 @@ class TimeboxCreator extends React.Component {
                 <label>Co robisz?
                     <input
                         ref={this.titleInput}
-                        type="text" />
+                        type="text"
+                        placeholder="opis"
+                        required />
                 </label><br />
                 <label>Ile minut?
                     <input 
                         ref={this.totalTimeInMinutesInput}
-                        type="number" />
+                        type="number"
+                        min="0.1"
+                        step="0.1"
+                        required />
                 </label><br />
                 <button disabled={isEditable}
                 >Dodaj timebox
