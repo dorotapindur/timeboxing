@@ -1,6 +1,7 @@
 import React from "react";
 import TimeboxCreator from "./TimeboxCreator";
 import Timebox from "./Timebox";
+import Error from "./Error";
 
 class TimeboxList extends React.Component {
     state = {
@@ -10,9 +11,9 @@ class TimeboxList extends React.Component {
             { id: "c", title: "Uczę się komponentów niekontrolowanych", totalTimeInMinutes: 5},
         ],
         isEditable: false,
-        timeboxEdited: null/*none in that moment*/
+        timeboxEdited: null,/*none in that moment*/
+        hasError: false,
     }
-
     addTimebox = (timebox) => {
         this.setState(prevState => {
             const timeboxes = [timebox, ...prevState.timeboxes];
@@ -33,7 +34,12 @@ class TimeboxList extends React.Component {
     }
 
     handleEdit = (selectedTimebox) => {
-        this.setState({ isEditable: true, timeboxEdited: selectedTimebox});
+        try {
+            this.setState({ isEditable: true, timeboxEdited: selectedTimebox});
+        } catch (error) {
+            console.log("Jest błąd przy edycji timeboxa", error);
+        }
+        
     }
     handleSave = (modifiedTimebox) => {
         const timeboxIndex = this.state.timeboxes.findIndex(timebox => timebox.id === modifiedTimebox.id);
@@ -53,14 +59,18 @@ class TimeboxList extends React.Component {
                     onSave={this.handleSave}
                     isEditable={isEditable}
                     timeboxEdited={timeboxEdited} />
-                {this.state.timeboxes.map((timebox, index) => (
+                <Error message="Coś się wykrzaczyło w liście">
+                {   
+                    this.state.timeboxes.map((timebox, index) => (
                     <Timebox
                         key={timebox.id}
                         title={timebox.title}
                         totalTimeInMinutes={timebox.totalTimeInMinutes}
                         onDelete={() => this.removeTimebox(index)}
                         onEdit={() => this.handleEdit(timebox)} />
-                ))}               
+                    ))
+                }
+                </Error>               
             </>
         )
     }
