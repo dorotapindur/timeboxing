@@ -20,6 +20,6 @@ class ErrorBoundary extends React.Component {
 }
 ErrorBoundary.propTypes = {
     message: PropTypes.string.isRequired,
-    children: PropTypes.any.isRequired, //cokolwiek, co nie jest nullem lub undefined
+    children: PropTypes.any.isRequired, //whatever that is not null or undefined
 };
 export default ErrorBoundary;
