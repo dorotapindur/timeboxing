@@ -3,6 +3,7 @@ import Clock from "./Clock";
 import ProgressBar from "./ProgressBar";
 import classNames from "classnames";
 import "../styles/scss-components/CurrentTimebox.scss";
+import { getHoursMinutesAndSecondsLeftFromDurationInSeconds } from "../lib/time";
 
 function CurrentTimebox (props) {
     const {
@@ -19,9 +20,7 @@ function CurrentTimebox (props) {
     } = props
                     
     const timeLeftInSeconds = totalTime - elapsedTimeInSeconds;
-    const hoursLeft = Math.floor(timeLeftInSeconds/3600);
-    const minutesLeft = Math.floor(timeLeftInSeconds/60);
-    const secondsLeft = Math.floor(timeLeftInSeconds%60);
+    const [hoursLeft, minutesLeft, secondsLeft] = getHoursMinutesAndSecondsLeftFromDurationInSeconds(timeLeftInSeconds);
     const progressInPercent = (elapsedTimeInSeconds/totalTime) * 100;
     let inactive = true;
     if (isRunning) { 
