@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Clock /> when given hours, minutes and seconds (TestRenderer)  renders properly  1`] = `
+<div>
+  <p
+    className="Clock"
+  >
+    Pozostało 
+    <span
+      className="Clock__hours"
+    >
+      01
+    </span>
+    <span
+      className="Clock__colon"
+    >
+      :
+    </span>
+    <span
+      className="Clock__minutes"
+    >
+      10
+    </span>
+    <span
+      className="Clock__colon"
+    >
+      :
+    </span>
+    <span
+      className="Clock__seconds"
+    >
+      22
+    </span>
+  </p>
+</div>
+`;
