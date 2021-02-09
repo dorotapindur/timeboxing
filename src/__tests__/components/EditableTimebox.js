@@ -6,15 +6,13 @@ describe('<EditableTimebox />', () => {
     afterEach(cleanup);
     it('shows edit button', () => {
         const { debug, getByText } = render(<EditableTimebox />);
-        
-        debug();
-        expect( () => {
+            expect( () => {
             getByText("Edytuj")
         }).not.toThrow();
     });
 
     it('shows pause button', () => {
-        const { debug, getByText } = render(<EditableTimebox />);
+        const { getByText } = render(<EditableTimebox />);
         expect( () => {
             getByText("Pauzuj")
         }).not.toThrow();
@@ -24,12 +22,22 @@ describe('<EditableTimebox />', () => {
         const { debug, getByText } = render(<EditableTimebox />);
         fireEvent.click(getByText("Zacznij"));
         fireEvent.click(getByText(/Pauzuj/));
-
-        debug();
         fireEvent.click(getByText("Wznów"));
         expect( () => {
             getByText("Pauzuj")
         }).not.toThrow();
     });
 
+    it('changes title on edit and confirm', () => {
+        const { debug, getByText, getByLabelText } = render(<EditableTimebox />);
+        let titleInput = getByLabelText("Co robisz?");
+        console.log(titleInput.value)
+        fireEvent.click(getByText("Zacznij"));
+        fireEvent.click(getByText("Edytuj"));
+        fireEvent.change( titleInput, { target: { value: 'Zmieniony tytuł' } });
+        fireEvent.click(getByText(/Zatwierdź/));
+        console.log(titleInput.value)
+        debug();
+        expect(titleInput.value).toEqual('Zmieniony tytuł');
+    });
 })
