@@ -14,4 +14,4 @@ Practical timer with pause and edit option. Enter what you want to do and how lo
 
 Check out on [dorotapindur.github.io/timeboxing/](https://dorotapindur.github.io/timeboxing/)
 
-This app is being created during Michał taszycki's React Course. New features still in progress.
+This app is being created during Michał Taszycki's React Course. New features still in progress.
