@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
 html {
+    font-family: 'Quicksand', sans-serif;
     font-size: 14px;
+}
+body {
+    margin: 0;
+    padding: 0;
 }
 label {
     font-weight: bold;
@@ -9,10 +16,12 @@ input {
     max-width: 90%;
     margin: 0 0 14px 5px;
     font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
 }
 button {
     font-size: 16px;
-    margin-left: 10px;
+    margin: 0 0 10px 10px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h1 {

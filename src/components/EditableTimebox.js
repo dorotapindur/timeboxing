@@ -7,7 +7,7 @@ uuidv4();
 
 class EditableTimebox extends React.Component {
     state = {
-        title: "Uczę się wyciągać stan w górę!",
+        title: "Uczę się Reacta",
         totalTimeInMinutes: 3,
         isEditable: false,
         isRunning: false,

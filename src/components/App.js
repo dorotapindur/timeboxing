@@ -1,5 +1,5 @@
 import React from "react";
-import TimeboxList from "./TimeboxList";
+import MainHeader from "./MainHeader";
 import EditableTimebox from "./EditableTimebox";
 import ErrorBoundary from "./ErrorBoundary";
 import "../styles/scss-components/App.scss";
@@ -8,7 +8,7 @@ function App() {
     return (
         <div className="App">
             <ErrorBoundary message = "Coś nie działa w całej aplikacji">
-                <TimeboxList />
+                <MainHeader />
                 <EditableTimebox />
             </ErrorBoundary>
         </div>
