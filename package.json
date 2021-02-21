@@ -2,7 +2,7 @@
   "name": "timeboxing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/dorotapindur/timeboxing",
+  "homepage": "https://dorotapindur.github.io/timeboxing/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/user-event": "^12.6.0",
