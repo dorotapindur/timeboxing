@@ -2,23 +2,12 @@
 @import "../utilities.scss";
 
 .TimeboxEditor {
-    background-color: aquamarine;
+    background-color: $main-background;
     max-width: 400px;
     text-align: right;
-    border: $default-border;
     border-radius: $border-radius;
-    padding: 20px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px $shadow, -5px -5px 10px $light;
+    padding: 24px;
+    margin: 0 auto 40px;
     position: relative;
-    &::before {
-        width: 60px;
-        height: 60px;
-        content: "";
-        background: url("../../images/tomato-icon.png");
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        z-index: 1;
-    }
 }

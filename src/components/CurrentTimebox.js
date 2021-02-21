@@ -27,7 +27,7 @@ function CurrentTimebox (props) {
         isEditable ? inactive = true : inactive = false
     } else { inactive = true }
     let almostOver = false;
-    if (progressInPercent > 50) {almostOver = true};
+    if (progressInPercent > 80 && !inactive) {almostOver = true};
     let currentTimeboxClassName = classNames(
         "CurrentTimebox",
         {

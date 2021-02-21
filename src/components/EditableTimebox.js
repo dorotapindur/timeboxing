@@ -1,4 +1,6 @@
 import React from "react";
+
+import MainHeader from "./MainHeader";
 import TimeboxEditor from "./TimeboxEditor";
 import CurrentTimebox from "./CurrentTimebox";
 
@@ -7,7 +9,7 @@ uuidv4();
 
 class EditableTimebox extends React.Component {
     state = {
-        title: "Uczę się wyciągać stan w górę!",
+        title: "Uczę się Reacta",
         totalTimeInMinutes: 3,
         isEditable: false,
         isRunning: false,
@@ -100,8 +102,12 @@ class EditableTimebox extends React.Component {
     render() {
         const { title, totalTimeInMinutes, isEditable, isRunning, isPaused, pausesCount, elapsedTimeInSeconds } = this.state;
         const totalTime = totalTimeInMinutes * 60;
+        
         return (
             <>
+                <MainHeader 
+                    isRunning={isRunning}
+                />
                 <TimeboxEditor
                     title={title}
                     totalTimeInMinutes={totalTimeInMinutes}

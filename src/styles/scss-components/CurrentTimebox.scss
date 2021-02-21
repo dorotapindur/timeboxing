@@ -3,10 +3,11 @@
 
 .CurrentTimebox {
     max-width: 400px;
-    border: $default-border;
     border-radius: $border-radius;
-    padding: 20px;
+    box-shadow: 5px 5px 10px $shadow, -5px -5px 10px $light;
+    padding: 24px;
     text-align: center;
     margin: 0 auto;
-    background-color: #ffffaa;
+    background-color: $timebox-background;
+    color: $main-color;
 }
