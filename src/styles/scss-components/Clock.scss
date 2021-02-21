@@ -2,10 +2,13 @@
 @import "../utilities.scss";
 
 .Clock {
-    color: $main-color;
+    color: $header-color;
     font-weight: bold;
     margin: 0 auto 20px;
+    padding: 5px 10px;
     width: max-content;
+    max-width: 90%;
+    border-radius: $border-radius;
     &__hours{
         color: darken($main-color, 10%);
     }

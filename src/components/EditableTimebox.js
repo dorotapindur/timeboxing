@@ -1,4 +1,6 @@
 import React from "react";
+
+import MainHeader from "./MainHeader";
 import TimeboxEditor from "./TimeboxEditor";
 import CurrentTimebox from "./CurrentTimebox";
 
@@ -100,8 +102,12 @@ class EditableTimebox extends React.Component {
     render() {
         const { title, totalTimeInMinutes, isEditable, isRunning, isPaused, pausesCount, elapsedTimeInSeconds } = this.state;
         const totalTime = totalTimeInMinutes * 60;
+        
         return (
             <>
+                <MainHeader 
+                    isRunning={isRunning}
+                />
                 <TimeboxEditor
                     title={title}
                     totalTimeInMinutes={totalTimeInMinutes}

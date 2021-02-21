@@ -21,19 +21,15 @@ function Clock({ hours, minutes, seconds, over}) {
         );
     return (
         <div>
-            <p className={clockClassName}>Pozostało <span className="Clock__hours">{hoursFormatted}</span><span className="Clock__colon">:</span><span className="Clock__minutes">{minutesFormatted}</span><span className="Clock__colon">:</span><span className="Clock__seconds">{secondsFormatted}</span></p>
+            <p className={clockClassName}>Pozostało {hoursFormatted}:{minutesFormatted}:{secondsFormatted}</p>
         </div>
         )
 };
-function NonNegativeNumberType(props, propName, componentName) {
-    if(props[propName] < 0) {
-        return new Error(`Invalid prop ${propName}, issued to component ${componentName}. It has to greater or equal to 0).`)
-    }
-}
+
 const NumbeOrStringType = PropTypes.oneOfType([PropTypes.number, PropTypes.string]);
 Clock.propTypes = {
     hours: NumbeOrStringType.isRequired,
     minutes: NumbeOrStringType.isRequired,
-    seconds: NonNegativeNumberType
+    seconds: NumbeOrStringType.isRequired,
 };
 export default Clock;

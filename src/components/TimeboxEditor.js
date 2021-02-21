@@ -47,7 +47,7 @@ function TimeboxEditor(props) {
                 onClick={onConfirm}
                 disabled={!isEditable}>Zatwierdź zmiany
             </button>
-            <p className={`orangered ${!isRunning ? "inactive" : ""}` }>running</p>
+            <p className={`orangered ${!isRunning ? "inactive" : ""}` }>w toku</p>
         </div>
     )
 };

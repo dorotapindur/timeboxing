@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import "./variables.scss";
 
 html {
     font-family: 'Quicksand', sans-serif;
@@ -6,22 +7,50 @@ html {
 }
 body {
     margin: 0;
-    padding: 0;
+    padding: 50px 0;
+    background: $main-background;
 }
 label {
+    font-size: 20px;
     font-weight: bold;
+    color: $main-color;
 }
 input {
     min-width: 60%;
     max-width: 90%;
     margin: 0 0 14px 5px;
+    padding: 5px 8px;
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    background-color: $main-color;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 5px $shadow;
 }
 button {
     font-size: 16px;
-    margin: 0 0 10px 10px;
+    margin: 10px 0 10px 10px;
     font-family: 'Quicksand', sans-serif;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $main-background;
+    box-shadow: 3px 3px 5px $shadow, -3px -3px 5px $light;
+    color: $main-color;
+    transition: text-shadow .2s linear;     
+    &:hover {
+        text-shadow: 0 0 5px white;
+    }
+    &:active {
+        color: $shadow;
+        background: $light;
+    }
+    &:disabled {
+        filter: blur(1px);
+        text-shadow: none;
+        color: $shadow;
+    }
 }
 
 h1 {

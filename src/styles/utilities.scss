@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .inactive {
-    filter: blur(2px) grayscale(1);
+    filter: blur(2px) grayscale(.2);
 }
 .invisible {
     display: none;
@@ -12,4 +12,43 @@
 .timeisup {
     color :white;
     background-color: red;
+}
+.shake {
+    animation: shake 1s 1;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(8deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(6deg);
+    }
+    40% {
+        transform: rotate(-6deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+    60% {
+        transform: rotate(-4deg);
+    }
+    70% {
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
 }

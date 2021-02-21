@@ -6,7 +6,7 @@
     height: 25px;
     margin-bottom: 20px;
     padding: 0;
-    background-color: $main-color;
+    background-color: $header-color;
     background-clip: content-box;
     position: relative;
     &::before {
@@ -16,8 +16,8 @@
         left: -6px;
         width: calc(100% + 12px);
         height: calc(100% + 12px);
-        border: 1px solid $main-color;
         border-radius: 5px;
+        box-shadow: inset 2px 2px 5px $shadow, inset -2px -2px 5px $light;
         box-sizing: border-box;
         z-index: 0;
     }
