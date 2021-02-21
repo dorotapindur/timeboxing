@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dorotapindur/timeboxing/static/css/main.b4c1e63f.chunk.css",
-    "main.js": "/dorotapindur/timeboxing/static/js/main.3a56b49b.chunk.js",
-    "main.js.map": "/dorotapindur/timeboxing/static/js/main.3a56b49b.chunk.js.map",
-    "runtime-main.js": "/dorotapindur/timeboxing/static/js/runtime-main.f59a44db.js",
-    "runtime-main.js.map": "/dorotapindur/timeboxing/static/js/runtime-main.f59a44db.js.map",
-    "static/js/2.ad615b8e.chunk.js": "/dorotapindur/timeboxing/static/js/2.ad615b8e.chunk.js",
-    "static/js/2.ad615b8e.chunk.js.map": "/dorotapindur/timeboxing/static/js/2.ad615b8e.chunk.js.map",
-    "index.html": "/dorotapindur/timeboxing/index.html",
-    "static/css/main.b4c1e63f.chunk.css.map": "/dorotapindur/timeboxing/static/css/main.b4c1e63f.chunk.css.map",
-    "static/js/2.ad615b8e.chunk.js.LICENSE.txt": "/dorotapindur/timeboxing/static/js/2.ad615b8e.chunk.js.LICENSE.txt"
+    "main.css": "/timeboxing/static/css/main.b4c1e63f.chunk.css",
+    "main.js": "/timeboxing/static/js/main.3a56b49b.chunk.js",
+    "main.js.map": "/timeboxing/static/js/main.3a56b49b.chunk.js.map",
+    "runtime-main.js": "/timeboxing/static/js/runtime-main.c9e29ea5.js",
+    "runtime-main.js.map": "/timeboxing/static/js/runtime-main.c9e29ea5.js.map",
+    "static/js/2.ad615b8e.chunk.js": "/timeboxing/static/js/2.ad615b8e.chunk.js",
+    "static/js/2.ad615b8e.chunk.js.map": "/timeboxing/static/js/2.ad615b8e.chunk.js.map",
+    "index.html": "/timeboxing/index.html",
+    "static/css/main.b4c1e63f.chunk.css.map": "/timeboxing/static/css/main.b4c1e63f.chunk.css.map",
+    "static/js/2.ad615b8e.chunk.js.LICENSE.txt": "/timeboxing/static/js/2.ad615b8e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f59a44db.js",
+    "static/js/runtime-main.c9e29ea5.js",
     "static/js/2.ad615b8e.chunk.js",
     "static/css/main.b4c1e63f.chunk.css",
     "static/js/main.3a56b49b.chunk.js"
