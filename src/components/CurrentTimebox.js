@@ -34,6 +34,12 @@ function CurrentTimebox (props) {
             "inactive": inactive,
         }
     )
+    let pauseButtonClassName = classNames(
+        "",
+        {
+            "blink": isPaused,
+        }
+    )
     return (
         <div className={currentTimeboxClassName}>
             <h2>{title}</h2>
@@ -52,6 +58,7 @@ function CurrentTimebox (props) {
                 onClick={onStop}
                 disabled={inactive}>Stop/Reset</button>
             <button
+                className={pauseButtonClassName}
                 onClick={onPause}
                 disabled={inactive}>{isPaused ? "Wznów" : "Pauzuj"}</button>
             <p>Liczba przerw: {pausesCount}</p>

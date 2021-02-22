@@ -13,6 +13,20 @@
     color :white;
     background-color: red;
 }
+.blink {
+    animation: blink 1.5s infinite;
+}
+@keyframes blink {
+    0% {
+        background-color: $main-background;
+    }
+    50% {
+        background-color: $header-color;
+    }
+    100% {
+        background-color: $main-background;
+    }
+}
 .shake {
     animation: shake 1s 1;
 }
