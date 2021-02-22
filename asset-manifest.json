@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/timeboxing/static/css/main.38d6fe2d.chunk.css",
-    "main.js": "/timeboxing/static/js/main.3a56b49b.chunk.js",
-    "main.js.map": "/timeboxing/static/js/main.3a56b49b.chunk.js.map",
+    "main.css": "/timeboxing/static/css/main.74d95740.chunk.css",
+    "main.js": "/timeboxing/static/js/main.bde7d7d7.chunk.js",
+    "main.js.map": "/timeboxing/static/js/main.bde7d7d7.chunk.js.map",
     "runtime-main.js": "/timeboxing/static/js/runtime-main.c9e29ea5.js",
     "runtime-main.js.map": "/timeboxing/static/js/runtime-main.c9e29ea5.js.map",
     "static/js/2.ad615b8e.chunk.js": "/timeboxing/static/js/2.ad615b8e.chunk.js",
     "static/js/2.ad615b8e.chunk.js.map": "/timeboxing/static/js/2.ad615b8e.chunk.js.map",
     "index.html": "/timeboxing/index.html",
-    "static/css/main.38d6fe2d.chunk.css.map": "/timeboxing/static/css/main.38d6fe2d.chunk.css.map",
+    "static/css/main.74d95740.chunk.css.map": "/timeboxing/static/css/main.74d95740.chunk.css.map",
     "static/js/2.ad615b8e.chunk.js.LICENSE.txt": "/timeboxing/static/js/2.ad615b8e.chunk.js.LICENSE.txt",
     "static/media/MainHeader.scss": "/timeboxing/static/media/timer-icon.e4307499.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c9e29ea5.js",
     "static/js/2.ad615b8e.chunk.js",
-    "static/css/main.38d6fe2d.chunk.css",
-    "static/js/main.3a56b49b.chunk.js"
+    "static/css/main.74d95740.chunk.css",
+    "static/js/main.bde7d7d7.chunk.js"
   ]
 }
