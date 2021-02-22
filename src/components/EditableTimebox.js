@@ -46,7 +46,7 @@ class EditableTimebox extends React.Component {
         this.startTimer();
     }
     handleStop = () => {
-        console.log("handle stop")       
+        console.log("handle stop");
         this.stopTimer();
     }
     togglePause = () => {
@@ -97,6 +97,13 @@ class EditableTimebox extends React.Component {
             pausesCount: 0,
             elapsedTimeInSeconds: 0, 
         });
+
+        function playSound() {
+            const sound = new Audio('https://dorotapindur.github.io/homepage/sounds/ding.mp3');
+            sound.play();
+            console.log('play');    
+        }
+        playSound();   
     }
 
     render() {
